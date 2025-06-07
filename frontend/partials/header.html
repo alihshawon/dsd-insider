@@ -2,133 +2,13 @@
   <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
     <!-- Logo -->
     <a href="/" class="flex items-center space-x-2">
-      <img src="assets/images/logo-light.png" alt="DSD Insider" class="h-8 dark:hidden">
-      <img src="assets/images/logo-dark.png" alt="DSD Insider Dark" class="h-8 hidden dark:block">
+      <img src="assets/images/logo-light.png" alt="DSD Insider" class="h-10 dark:hidden">
+      <img src="assets/images/logo-dark.png" alt="DSD Insider Dark" class="h-10 hidden dark:block">
     </a>
 
-    <!-- Desktop Menu -->
-    <nav class="hidden md:flex space-x-6 font-medium text-gray-700 dark:text-gray-200">
-      <!-- সমাজ ও রাজনীতি -->
-      <div class="relative group">
-        <a href="/category/সমাজ-ও-রাজনীতি" class="hover:text-[#01696c]">সমাজ ও রাজনীতি</a>
-        <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-200 z-50">
-          <a href="/category/রাজনীতি" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">রাজনীতি</a>
-          <a href="/category/সমাজ" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">সমাজ</a>
-        </div>
-      </div>
 
-      <!-- বিজ্ঞান ও প্রযুক্তি -->
-      <div class="relative group">
-        <a href="/category/বিজ্ঞান-ও-প্রযুক্তি" class="hover:text-[#01696c]">বিজ্ঞান ও প্রযুক্তি</a>
-        <div class="absolute left-0 mt-2 w-56 bg-white dark:bg-gray-800 shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-200 z-50">
-          <a href="/category/মহাকাশ" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">মহাকাশ</a>
-          <a href="/category/উদ্ভাবন" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">উদ্ভাবন</a>
-          <a href="/category/বিজ্ঞান" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">বিজ্ঞান</a>
-        </div>
-      </div>
 
-      <!-- লাইফস্টাইল -->
-      <div class="relative group">
-        <a href="/category/লাইফস্টাইল" class="hover:text-[#01696c]">লাইফস্টাইল</a>
-        <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-200 z-50">
-          <a href="/category/ভ্রমণ" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">ভ্রমণ</a>
-          <a href="/category/খাদ্য" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">খাদ্য</a>
-          <a href="/category/সংস্কৃতি" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">সংস্কৃতি</a>
-        </div>
-      </div>
-
-      <!-- সাহিত্য -->
-      <div class="relative group">
-        <a href="/category/সাহিত্য" class="hover:text-[#01696c]">সাহিত্য</a>
-        <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-200 z-50">
-          <a href="/category/কবিতা" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">কবিতা</a>
-          <a href="/category/গল্প" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">গল্প</a>
-          <a href="/category/নিবন্ধ" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">নিবন্ধ</a>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Search Icon -->
-    <button id="search-btn" class="hidden md:flex items-center text-gray-700 dark:text-gray-200 hover:text-[#01696c]" aria-label="Search">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0a7.5 7.5 0 1110.6-10.6 7.5 7.5 0 01-10.6 10.6z" />
-      </svg>
-    </button>
-
-    <!-- Auth Buttons -->
-    <div class="hidden md:flex items-center space-x-3 font-medium text-gray-700 dark:text-gray-200">
-      <a href="/login" class="hover:text-[#01696c]">Login</a>
-      <span class="text-gray-400 select-none">|</span>
-      <a href="/register" class="hover:text-[#01696c]">Register</a>
-    </div>
-
-    <!-- Mobile Hamburger -->
-    <button id="hamburger-btn" class="md:hidden flex flex-col space-y-1.5" aria-label="Menu">
-      <span class="block w-6 h-0.5 bg-gray-700 dark:bg-gray-200"></span>
-      <span class="block w-6 h-0.5 bg-gray-700 dark:bg-gray-200"></span>
-      <span class="block w-6 h-0.5 bg-gray-700 dark:bg-gray-200"></span>
-    </button>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="md:hidden hidden flex-col bg-white dark:bg-gray-900 p-4 space-y-2 shadow-lg">
-    <!-- Repeat Menu with Dropdown Toggle -->
-    <details>
-      <summary class="font-medium text-gray-700 dark:text-gray-200 cursor-pointer">সমাজ ও রাজনীতি</summary>
-      <div class="pl-4 space-y-1">
-        <a href="/category/রাজনীতি" class="block text-sm hover:text-[#01696c]">রাজনীতি</a>
-        <a href="/category/সমাজ" class="block text-sm hover:text-[#01696c]">সমাজ</a>
-      </div>
-    </details>
-
-    <details>
-      <summary class="font-medium text-gray-700 dark:text-gray-200 cursor-pointer">বিজ্ঞান ও প্রযুক্তি</summary>
-      <div class="pl-4 space-y-1">
-        <a href="/category/মহাকাশ" class="block text-sm hover:text-[#01696c]">মহাকাশ</a>
-        <a href="/category/উদ্ভাবন" class="block text-sm hover:text-[#01696c]">উদ্ভাবন</a>
-        <a href="/category/বিজ্ঞান" class="block text-sm hover:text-[#01696c]">বিজ্ঞান</a>
-      </div>
-    </details>
-
-    <details>
-      <summary class="font-medium text-gray-700 dark:text-gray-200 cursor-pointer">লাইফস্টাইল</summary>
-      <div class="pl-4 space-y-1">
-        <a href="/category/ভ্রমণ" class="block text-sm hover:text-[#01696c]">ভ্রমণ</a>
-        <a href="/category/খাদ্য" class="block text-sm hover:text-[#01696c]">খাদ্য</a>
-        <a href="/category/সংস্কৃতি" class="block text-sm hover:text-[#01696c]">সংস্কৃতি</a>
-      </div>
-    </details>
-
-    <details>
-      <summary class="font-medium text-gray-700 dark:text-gray-200 cursor-pointer">সাহিত্য</summary>
-      <div class="pl-4 space-y-1">
-        <a href="/category/কবিতা" class="block text-sm hover:text-[#01696c]">কবিতা</a>
-        <a href="/category/গল্প" class="block text-sm hover:text-[#01696c]">গল্প</a>
-        <a href="/category/নিবন্ধ" class="block text-sm hover:text-[#01696c]">নিবন্ধ</a>
-      </div>
-    </details>
-
-    <!-- Login/Register -->
-    <div class="pt-4 border-t border-gray-300 dark:border-gray-700 flex space-x-2 font-medium text-gray-700 dark:text-gray-200">
-      <a href="/login" class="hover:text-[#01696c]">Login</a>
-      <span class="text-gray-400 select-none">|</span>
-      <a href="/register" class="hover:text-[#01696c]">Register</a>
-    </div>
+    <a href="/login" class="block">Login</a>
+    <a href="/register" class="block">Register</a>
   </div>
 </header>
-
-<!-- Toggle scripts -->
-<script>
-  // Mobile menu toggle
-  const btn = document.getElementById('hamburger-btn');
-  const menu = document.getElementById('mobile-menu');
-  btn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
-
-  // (Optional) Search button click handler - you can add your own search modal or redirect here
-  const searchBtn = document.getElementById('search-btn');
-  searchBtn.addEventListener('click', () => {
-    alert('Search button clicked! You can add search functionality here.');
-  });
-</script>

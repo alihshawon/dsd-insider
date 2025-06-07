@@ -1,51 +1,50 @@
-// Function to fetch and load partial HTML files into the page
-async function loadPartial(id, url) {
-  try {
-    const response = await fetch(url);
-    if (!response.ok) throw new Error(`Failed to load ${url}`);
-    const html = await response.text();
-    document.getElementById(id).innerHTML = html;
+// main.js
 
-    // If header is loaded, setup hamburger logic
-    if (id === 'header') setupHamburger();
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-// Setup hamburger menu logic after header is loaded
-function setupHamburger() {
-  const hamburger = document.getElementById('hamburger-btn');
+document.addEventListener('DOMContentLoaded', () => {
+  // Hamburger menu toggle
+  const hamburgerBtn = document.getElementById('hamburger-btn');
   const mobileMenu = document.getElementById('mobile-menu');
 
-  if (!hamburger || !mobileMenu) return;
+  hamburgerBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
 
-  hamburger.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.contains('translate-x-0');
+  // Dark/Light mode toggle
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  const themeIcon = document.getElementById('theme-icon');
 
-    if (isOpen) {
-      mobileMenu.classList.remove('translate-x-0');
-      mobileMenu.classList.add('translate-x-full');
-      hamburger.setAttribute('aria-expanded', 'false');
-      mobileMenu.setAttribute('aria-hidden', 'true');
+  function setTheme(theme) {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+      // Update icon to sun for light mode (optional)
+      themeIcon.innerHTML = `<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.66-10h-1M4.34 12h-1m14.07 5.07l-.7-.7M6.34 6.34l-.7-.7m12.02 12.02l-.7-.7M6.34 17.66l-.7-.7M12 7a5 5 0 100 10 5 5 0 000-10z"/>`;
     } else {
-      mobileMenu.classList.remove('translate-x-full');
-      mobileMenu.classList.add('translate-x-0');
-      hamburger.setAttribute('aria-expanded', 'true');
-      mobileMenu.setAttribute('aria-hidden', 'false');
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+      // Update icon to moon for dark mode (optional)
+      themeIcon.innerHTML = `<path d="M12 3.75a8.25 8.25 0 100 16.5A8.25 8.25 0 0112 3.75z"/>`;
     }
+  }
+
+  // Initialize theme from localStorage or system preference
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    setTheme(savedTheme);
+  } else {
+    // Detect system preference
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setTheme(prefersDark ? 'dark' : 'light');
+  }
+
+  themeToggleBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.contains('dark');
+    setTheme(isDark ? 'light' : 'dark');
   });
 
-  document.addEventListener('click', (event) => {
-    const clickedInsideMenu = mobileMenu.contains(event.target);
-    const clickedHamburger = hamburger.contains(event.target);
-    const isOpen = mobileMenu.classList.contains('translate-x-0');
-
-    if (!clickedInsideMenu && !clickedHamburger && isOpen) {
-      mobileMenu.classList.remove('translate-x-0');
-      mobileMenu.classList.add('translate-x-full');
-      hamburger.setAttribute('aria-expanded', 'false');
-      mobileMenu.setAttribute('aria-hidden', 'true');
-    }
+  // Search button event (currently just an alert, change as needed)
+  const searchBtn = document.getElementById('search-btn');
+  searchBtn.addEventListener('click', () => {
+    alert('Search button clicked! Implement your search functionality here.');
   });
-}
+});

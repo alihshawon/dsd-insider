@@ -1,0 +1,114 @@
+<header class="fixed top-0 left-0 right-0 bg-white dark:bg-gray-900 shadow-md z-50">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="/" class="flex items-center space-x-2">
+      <img src="assets/images/logo-light.png" alt="DSD Insider" class="h-10 dark:hidden">
+      <img src="assets/images/logo-dark.png" alt="DSD Insider Dark" class="h-10 hidden dark:block">
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-4 font-medium text-gray-700 dark:text-gray-200 text-sm relative">
+      <!-- Example Menu with Submenu -->
+      <div class="relative group">
+        <a href="/category/সমাজ-ও-রাজনীতি" class="hover:text-[#01696c] px-3 py-2 inline-block">সমাজ ও রাজনীতি</a>
+        <div class="absolute left-0 top-full mt-0 group-hover:block hidden bg-white dark:bg-gray-800 shadow-lg w-44 z-50 border-t border-gray-100 dark:border-gray-700"
+             style="border-radius: 0;">
+          <a href="/category/রাজনীতি" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">রাজনীতি</a>
+          <a href="/category/সমাজ" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">সমাজ</a>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <a href="/category/বিজ্ঞান-ও-প্রযুক্তি" class="hover:text-[#01696c] px-3 py-2 inline-block">বিজ্ঞান ও প্রযুক্তি</a>
+        <div class="absolute left-0 top-full mt-0 group-hover:block hidden bg-white dark:bg-gray-800 shadow-lg w-52 z-50 border-t border-gray-100 dark:border-gray-700"
+             style="border-radius: 0;">
+          <a href="/category/মহাকাশ" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">মহাকাশ</a>
+          <a href="/category/উদ্ভাবন" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">উদ্ভাবন</a>
+          <a href="/category/বিজ্ঞান" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">বিজ্ঞান</a>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <a href="/category/লাইফস্টাইল" class="hover:text-[#01696c] px-3 py-2 inline-block">লাইফস্টাইল</a>
+        <div class="absolute left-0 top-full mt-0 group-hover:block hidden bg-white dark:bg-gray-800 shadow-lg w-44 z-50 border-t border-gray-100 dark:border-gray-700"
+             style="border-radius: 0;">
+          <a href="/category/ভ্রমণ" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">ভ্রমণ</a>
+          <a href="/category/খাদ্য" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">খাদ্য</a>
+          <a href="/category/সংস্কৃতি" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">সংস্কৃতি</a>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <a href="/category/সাহিত্য" class="hover:text-[#01696c] px-3 py-2 inline-block">সাহিত্য</a>
+        <div class="absolute left-0 top-full mt-0 group-hover:block hidden bg-white dark:bg-gray-800 shadow-lg w-44 z-50 border-t border-gray-100 dark:border-gray-700"
+             style="border-radius: 0;">
+          <a href="/category/কবিতা" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">কবিতা</a>
+          <a href="/category/গল্প" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">গল্প</a>
+          <a href="/category/নিবন্ধ" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">নিবন্ধ</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Search & Theme Toggle -->
+    <div class="hidden md:flex items-center space-x-4 text-gray-500 dark:text-gray-300 text-sm">
+      <!-- Search Icon -->
+      <button id="search-btn" aria-label="Search" class="hover:text-[#01696c]">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-4.35-4.35M16.65 16.65A7.5 7.5 0 1016.65 2.5a7.5 7.5 0 000 14.15z" />
+        </svg>
+      </button>
+
+      <!-- Theme Toggle -->
+      <button id="theme-toggle" aria-label="Toggle Theme" class="hover:text-[#01696c]">
+        <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 3.75a8.25 8.25 0 100 16.5A8.25 8.25 0 0112 3.75z" />
+        </svg>
+      </button>
+
+      <a href="/login" class="hover:text-[#01696c]">Login</a>
+      <span class="text-gray-400 select-none">|</span>
+      <a href="/register" class="hover:text-[#01696c]">Register</a>
+    </div>
+
+    <!-- Mobile Menu Icon -->
+    <button id="hamburger-btn" class="md:hidden text-2xl" aria-label="Menu">☰</button>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div id="mobile-menu" class="md:hidden hidden flex-col bg-white dark:bg-gray-900 p-4 space-y-2 shadow-lg text-sm">
+    <details class="group">
+      <summary class="cursor-pointer text-[#01696c] font-medium text-lg">সমাজ ও রাজনীতি</summary>
+      <div class="pl-4 space-y-1 mt-1">
+        <a href="/category/রাজনীতি" class="block text-gray-700 dark:text-gray-200">রাজনীতি</a>
+        <a href="/category/সমাজ" class="block text-gray-700 dark:text-gray-200">সমাজ</a>
+      </div>
+    </details>
+    <details class="group">
+      <summary class="cursor-pointer text-[#01696c] font-medium text-lg">বিজ্ঞান ও প্রযুক্তি</summary>
+      <div class="pl-4 space-y-1 mt-1">
+        <a href="/category/মহাকাশ" class="block text-gray-700 dark:text-gray-200">মহাকাশ</a>
+        <a href="/category/উদ্ভাবন" class="block text-gray-700 dark:text-gray-200">উদ্ভাবন</a>
+        <a href="/category/বিজ্ঞান" class="block text-gray-700 dark:text-gray-200">বিজ্ঞান</a>
+      </div>
+    </details>
+    <details class="group">
+      <summary class="cursor-pointer text-[#01696c] font-medium text-lg">লাইফস্টাইল</summary>
+      <div class="pl-4 space-y-1 mt-1">
+        <a href="/category/ভ্রমণ" class="block text-gray-700 dark:text-gray-200">ভ্রমণ</a>
+        <a href="/category/খাদ্য" class="block text-gray-700 dark:text-gray-200">খাদ্য</a>
+        <a href="/category/সংস্কৃতি" class="block text-gray-700 dark:text-gray-200">সংস্কৃতি</a>
+      </div>
+    </details>
+    <details class="group">
+      <summary class="cursor-pointer text-[#01696c] font-medium text-lg">সাহিত্য</summary>
+      <div class="pl-4 space-y-1 mt-1">
+        <a href="/category/কবিতা" class="block text-gray-700 dark:text-gray-200">কবিতা</a>
+        <a href="/category/গল্প" class="block text-gray-700 dark:text-gray-200">গল্প</a>
+        <a href="/category/নিবন্ধ" class="block text-gray-700 dark:text-gray-200">নিবন্ধ</a>
+      </div>
+    </details>
+    <a href="/login" class="block">Login</a>
+    <a href="/register" class="block">Register</a>
+  </div>
+</header>
